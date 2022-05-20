@@ -1,7 +1,7 @@
 export default (posts = [], action) => { //since this reducer is not being used, for now just function export default. 
     switch(action.type) {
         case 'FETCH_ALL':
-            return posts;
+            return action.payload; //this will retrieve our posts
         case 'CREATE':
             return posts;
         default:
