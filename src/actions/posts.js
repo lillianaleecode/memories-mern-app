@@ -1,8 +1,8 @@
 import * as api from '../api';
 
-//action creators
-const getPosts = () =>  async (dispatch) => {
+//action creators (actions creators are functions that return actions. )
+const getPosts = () => async (dispatch) => { //since we are dealing with async login, we need to add this async logic
     const action = { type: 'fetch_ALL', payload: []}
 
-    return action;
+    dispatch(action); //this is how it#s done with redux thunk. instead of returning an action, we dispatch it.
 }
