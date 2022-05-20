@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
 import memories from './images/dummy_frame.png';
 import Posts from "./components/Posts/Posts";
@@ -7,11 +7,10 @@ import { useDispatch } from "react-redux";
 
 import {getPosts} from './actions/posts';
 import useStyles from './styles';
-import { useEffect } from 'react';
 
 const App = () => {
   
-    const classes = useStyles();
+    //const classes = useStyles();
     const dispatch = useDispatch();
 
     useEffect(() => {
