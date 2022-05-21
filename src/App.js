@@ -6,7 +6,7 @@ import Form from "./components/Form/Form";
 import { useDispatch } from "react-redux";
 
 import {getPosts} from './actions/posts';
-import useStyles from './styles';
+//import useStyles from './styles';
 
 const App = () => {
   
@@ -15,18 +15,18 @@ const App = () => {
 
     useEffect(() => {
       dispatch (getPosts());
-    }, []);
+    }, [dispatch]);
 
     return (
         <Container maxWidth="lg">
       <AppBar  position="static" color="inherit">
         <Typography variant="h2" align="center">Memories for me</Typography>
-        <img src={memories}  />
+        <img  src={memories} alt="icon" height="500" />
       </AppBar>
 
       <Grow in>
         <Container>
-          <Grid container justify="space-between" alignItems="stretch" spacing={3}>
+          <Grid container justifyContent="space-between" alignItems="stretch" spacing={3}>
             <Grid item xs={12} sm={7}> 
               <Posts  />
             </Grid>
